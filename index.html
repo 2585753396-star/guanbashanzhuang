@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>贵州省铜仁市沿河县沙子街道大漆村官坝山庄 - 品味自然，享受生活</title>
+<style>
+/* ===== 全局样式 ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  color: #3e2c1c; background: #fdf8f0; line-height: 1.7;
+}
+
+/* ===== 导航栏 ===== */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; height: 60px;
+}
+.navbar .logo { font-size: 20px; font-weight: bold; color: #5a8f3c; display: flex; align-items: center; gap: 8px; }
+.nav-links { display: flex; gap: 20px; list-style: none; }
+.nav-links a { text-decoration: none; color: #5a4030; font-size: 14px; transition: color 0.3s; font-weight: 500; white-space: nowrap; }
+.nav-links a:hover { color: #5a8f3c; }
+.menu-toggle { display: none; background: none; border: none; font-size: 28px; cursor: pointer; color: #5a4030; }
+
+/* ===== Hero 区 ===== */
+.hero {
+  min-height: 100vh; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, rgba(60,100,30,0.88) 0%, rgba(35,60,18,0.93) 50%, rgba(25,40,12,0.96) 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; color: #fff; padding: 20px;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 60%, rgba(255,255,255,0.06) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.04) 0%, transparent 30%);
+}
+.hero > * { position: relative; z-index: 1; }
+.hero h1 { font-size: clamp(36px, 6vw, 64px); font-weight: 900; letter-spacing: 4px; text-shadow: 2px 2px 8px rgba(0,0,0,0.3); margin-bottom: 16px; }
+.hero .subtitle { font-size: clamp(18px, 2.5vw, 24px); opacity: 0.95; margin-bottom: 32px; letter-spacing: 2px; }
+.hero .badges { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.hero .badge { background: rgba(255,255,255,0.18); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.25); padding: 10px 20px; border-radius: 30px; font-size: 15px; letter-spacing: 1px; }
+.hero .scroll-hint { position: absolute; bottom: 30px; z-index: 1; animation: bounce 2s infinite; font-size: 32px; opacity: 0.7; }
+@keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+/* ===== 通用区块 ===== */
+.section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
+.section-full { padding: 80px 20px; background: #f5f0e6; }
+.section-full .section-inner { max-width: 1100px; margin: 0 auto; }
+.section-title { text-align: center; margin-bottom: 50px; }
+.section-title h2 { font-size: clamp(28px, 4vw, 38px); color: #5a8f3c; position: relative; display: inline-block; padding-bottom: 12px; }
+.section-title h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: linear-gradient(90deg, #5a8f3c, #8bc34a); border-radius: 2px; }
+.section-title p { color: #8b7355; margin-top: 10px; font-size: 16px; }
+
+/* ===== 关于我们 ===== */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.about-text h3 { font-size: 24px; color: #5a8f3c; margin-bottom: 16px; }
+.about-text p { margin-bottom: 12px; color: #6b5a45; font-size: 16px; }
+.about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+.about-feature { background: #fff; padding: 16px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; }
+.about-feature .icon { font-size: 32px; margin-bottom: 8px; }
+.about-feature h4 { font-size: 15px; color: #5a4030; }
+.about-image { background: linear-gradient(135deg, #c8e6a0, #8bc34a); border-radius: 20px; height: 380px; display: flex; align-items: center; justify-content: center; font-size: 100px; color: rgba(255,255,255,0.5); box-shadow: 0 8px 30px rgba(90,143,60,0.2); }
+
+/* ===== 四季日历 ===== */
+.season-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.season-card { background: #fff; border-radius: 16px; padding: 24px 16px; text-align: center; box-shadow: 0 3px 16px rgba(0,0,0,0.06); transition: transform 0.3s; }
+.season-card:hover { transform: translateY(-4px); }
+.season-card .season-icon { font-size: 48px; margin-bottom: 12px; }
+.season-card h3 { font-size: 18px; color: #5a4030; margin-bottom: 4px; }
+.season-card .months { font-size: 13px; color: #5a8f3c; font-weight: 600; margin-bottom: 10px; }
+.season-card ul { list-style: none; text-align: left; padding: 0 8px; }
+.season-card ul li { font-size: 13px; color: #8b7355; padding: 4px 0; border-bottom: 1px dashed #f0e8d8; }
+.season-card ul li:last-child { border-bottom: none; }
+.season-card.spring { border-top: 4px solid #f8a4c8; }
+.season-card.summer { border-top: 4px solid #4fc3f7; }
+.season-card.autumn { border-top: 4px solid #ffb74d; }
+.season-card.winter { border-top: 4px solid #90caf9; }
+
+/* ===== 优惠活动 ===== */
+.promo-banner {
+  background: linear-gradient(135deg, #e85d3a, #f5926b); color: #fff;
+  border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(232,93,58,0.3);
+}
+.promo-banner .promo-badge { background: #fff; color: #e85d3a; padding: 6px 16px; border-radius: 20px; font-weight: 900; font-size: 14px; white-space: nowrap; }
+.promo-banner .promo-text { font-size: 18px; font-weight: 600; }
+.promo-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.promo-card { background: #fff; border-radius: 14px; padding: 20px; box-shadow: 0 3px 14px rgba(0,0,0,0.06); display: flex; gap: 14px; align-items: flex-start; }
+.promo-card .p-icon { font-size: 36px; flex-shrink: 0; }
+.promo-card h4 { font-size: 16px; color: #5a4030; margin-bottom: 4px; }
+.promo-card .p-desc { font-size: 13px; color: #999; }
+.promo-card .p-price { font-size: 18px; font-weight: bold; color: #e85d3a; margin-top: 4px; }
+
+/* ===== 特色服务 ===== */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.service-card { background: #fff; border-radius: 16px; padding: 32px 24px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; border-top: 4px solid #8bc34a; }
+.service-card:hover { transform: translateY(-6px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+.service-card .icon { font-size: 48px; margin-bottom: 16px; }
+.service-card h3 { font-size: 20px; color: #5a4030; margin-bottom: 10px; }
+.service-card p { color: #8b7355; font-size: 14px; }
+
+/* ===== 菜品菜单 ===== */
+.menu-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 36px; flex-wrap: wrap; }
+.menu-tab { padding: 10px 24px; border: 2px solid #8bc34a; background: #fff; color: #5a8f3c; border-radius: 30px; cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.3s; }
+.menu-tab.active, .menu-tab:hover { background: #5a8f3c; color: #fff; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.menu-item { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 3px 16px rgba(0,0,0,0.07); display: flex; transition: transform 0.3s; }
+.menu-item:hover { transform: translateY(-4px); }
+.menu-item .img { width: 120px; min-height: 120px; background: linear-gradient(135deg, #e8f5d0, #c5e1a5); display: flex; align-items: center; justify-content: center; font-size: 42px; flex-shrink: 0; }
+.menu-item .info { padding: 16px; flex: 1; }
+.menu-item .info h4 { font-size: 17px; color: #5a4030; margin-bottom: 4px; }
+.menu-item .info .desc { font-size: 13px; color: #999; margin-bottom: 8px; }
+.menu-item .info .price { font-size: 20px; font-weight: bold; color: #e85d3a; }
+.menu-item .info .price span { font-size: 13px; font-weight: normal; }
+.menu-badge { display: inline-block; background: #ffe0d0; color: #e85d3a; padding: 2px 10px; border-radius: 12px; font-size: 12px; margin-left: 8px; font-weight: 600; }
+.menu-download { text-align: center; margin-top: 30px; }
+.menu-download button { padding: 12px 30px; background: #5a8f3c; color: #fff; border: none; border-radius: 30px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 14px rgba(90,143,60,0.3); }
+.menu-download button:hover { background: #4a7f2c; transform: translateY(-2px); }
+
+/* ===== 价格表 ===== */
+.price-table { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.price-table thead th { background: #5a8f3c; color: #fff; padding: 16px; font-size: 16px; text-align: left; }
+.price-table td, .price-table th { padding: 14px 20px; }
+.price-table tbody tr { border-bottom: 1px solid #f0e8d8; }
+.price-table tbody tr:last-child { border-bottom: none; }
+.price-table tbody tr:hover { background: #fdf8f0; }
+.price-table .category { background: #f5f0e6; font-weight: bold; color: #5a8f3c; }
+.price-table .price-col { text-align: right; font-weight: bold; color: #e85d3a; white-space: nowrap; }
+
+/* ===== 环境展示 + 灯箱 ===== */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.gallery-item { aspect-ratio: 4/3; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #dcedc8, #aed581, #8bc34a); display: flex; align-items: center; justify-content: center; font-size: 56px; color: rgba(255,255,255,0.6); transition: transform 0.3s; cursor: pointer; position: relative; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.gallery-item:hover { transform: scale(1.03); }
+.gallery-item.wide { grid-column: span 2; }
+.gallery-item .caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px; background: linear-gradient(transparent, rgba(0,0,0,0.5)); color: #fff; font-size: 14px; font-weight: 500; }
+/* 灯箱 */
+.lightbox { position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); display: none; align-items: center; justify-content: center; flex-direction: column; }
+.lightbox.open { display: flex; }
+.lightbox .lb-content { font-size: 100px; max-width: 80vw; max-height: 60vh; background: linear-gradient(135deg, #8bc34a, #558b2f); border-radius: 20px; padding: 60px 80px; color: rgba(255,255,255,0.7); text-align: center; }
+.lightbox .lb-caption { color: #fff; font-size: 18px; margin-top: 20px; }
+.lightbox .lb-close { position: absolute; top: 20px; right: 30px; font-size: 40px; color: #fff; cursor: pointer; background: none; border: none; }
+.lightbox .lb-prev, .lightbox .lb-next { position: absolute; top: 50%; transform: translateY(-50%); font-size: 40px; color: #fff; cursor: pointer; background: none; border: none; padding: 20px; }
+.lightbox .lb-prev { left: 10px; }
+.lightbox .lb-next { right: 10px; }
+
+/* ===== 顾客评价 ===== */
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.review-card { background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 3px 16px rgba(0,0,0,0.07); }
+.review-card .stars { color: #f5a623; font-size: 18px; margin-bottom: 10px; }
+.review-card .text { color: #6b5a45; font-size: 15px; margin-bottom: 12px; font-style: italic; line-height: 1.6; }
+.review-card .author { color: #999; font-size: 13px; }
+
+/* ===== FAQ ===== */
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item { background: #fff; border-radius: 14px; margin-bottom: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); overflow: hidden; }
+.faq-q { padding: 18px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 16px; color: #5a4030; user-select: none; }
+.faq-q .arrow { transition: transform 0.3s; font-size: 12px; color: #5a8f3c; }
+.faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+.faq-a { padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; font-size: 14px; color: #8b7355; line-height: 1.8; background: #fdfaf5; }
+.faq-item.open .faq-a { max-height: 300px; padding: 0 24px 18px; }
+
+/* ===== 交通指引 ===== */
+.traffic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.traffic-card { background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 3px 16px rgba(0,0,0,0.06); }
+.traffic-card h4 { font-size: 18px; color: #5a8f3c; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.traffic-card p { font-size: 14px; color: #8b7355; line-height: 1.8; }
+.map-container { border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-top: 30px; }
+.map-container iframe { width: 100%; height: 400px; border: none; display: block; }
+.map-actions { display: flex; gap: 12px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+.map-actions a { padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; }
+.map-actions .btn-baidu { background: #4e6ef2; color: #fff; }
+.map-actions .btn-gaode { background: #1678ff; color: #fff; }
+.map-actions .btn-baidu:hover, .map-actions .btn-gaode:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.2); }
+
+/* ===== 预约表单 ===== */
+.reserve-form { max-width: 650px; margin: 0 auto; background: #fff; border-radius: 20px; padding: 36px; box-shadow: 0 6px 30px rgba(0,0,0,0.08); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 14px; font-weight: 600; color: #5a4030; margin-bottom: 6px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 2px solid #e8e0d0; border-radius: 12px; font-size: 15px; font-family: inherit; transition: border-color 0.3s; background: #fdfaf5; color: #3e2c1c; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #5a8f3c; }
+.form-group textarea { height: 80px; resize: vertical; }
+.submit-btn { width: 100%; padding: 14px; background: #5a8f3c; color: #fff; border: none; border-radius: 14px; font-size: 17px; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 16px rgba(90,143,60,0.3); }
+.submit-btn:hover { background: #4a7f2c; transform: translateY(-2px); }
+
+/* ===== 联系我们 ===== */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.contact-info h3 { font-size: 24px; color: #5a8f3c; margin-bottom: 20px; }
+.contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+.contact-item .cicon { font-size: 24px; width: 44px; height: 44px; background: #e8f5d0; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-item .label { font-size: 14px; color: #999; }
+.contact-item .value { font-size: 16px; color: #5a4030; font-weight: 500; }
+.qr-box { background: #fff; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.qr-box h4 { margin-bottom: 16px; color: #5a8f3c; }
+.qr-box canvas, .qr-box img { border-radius: 12px; }
+.qr-box .tip { margin-top: 12px; color: #999; font-size: 13px; }
+.qr-actions { margin-top: 16px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.qr-actions button { padding: 10px 20px; border: 2px solid #5a8f3c; background: #fff; color: #5a8f3c; border-radius: 25px; cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.3s; }
+.qr-actions button:hover { background: #5a8f3c; color: #fff; }
+
+/* ===== 微信悬浮按钮 ===== */
+.float-btns { position: fixed; right: 20px; bottom: 100px; z-index: 998; display: flex; flex-direction: column; gap: 12px; }
+.float-btn { width: 50px; height: 50px; border-radius: 50%; border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.2); font-size: 24px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; position: relative; }
+.float-btn:hover { transform: scale(1.1); }
+.float-btn.wechat { background: #07c160; color: #fff; }
+.float-btn.tel { background: #5a8f3c; color: #fff; }
+.float-btn .tooltip { position: absolute; right: 62px; background: #333; color: #fff; padding: 8px 14px; border-radius: 8px; font-size: 13px; white-space: nowrap; opacity: 0; visibility: hidden; transition: all 0.3s; pointer-events: none; }
+.float-btn:hover .tooltip { opacity: 1; visibility: visible; }
+.float-btn .copied { position: absolute; right: 62px; background: #07c160; color: #fff; padding: 8px 14px; border-radius: 8px; font-size: 13px; white-space: nowrap; opacity: 0; visibility: hidden; transition: all 0.3s; }
+
+/* ===== 页脚 ===== */
+.footer { background: #3e2c1c; color: #c8b89a; text-align: center; padding: 40px 20px; font-size: 14px; }
+.footer .brand { font-size: 22px; color: #8bc34a; font-weight: bold; margin-bottom: 8px; }
+
+/* ===== 回到顶部 ===== */
+.back-top { position: fixed; bottom: 30px; right: 30px; width: 46px; height: 46px; border-radius: 50%; background: #5a8f3c; color: #fff; border: none; font-size: 22px; cursor: pointer; box-shadow: 0 4px 16px rgba(90,143,60,0.4); opacity: 0; visibility: hidden; transition: all 0.3s; display: flex; align-items: center; justify-content: center; z-index: 997; }
+.back-top.show { opacity: 1; visibility: visible; }
+
+/* ===== Toast ===== */
+.toast { position: fixed; top: 80px; left: 50%; transform: translateX(-50%); z-index: 10000; background: #333; color: #fff; padding: 12px 24px; border-radius: 25px; font-size: 14px; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+.toast.show { opacity: 1; }
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+  .nav-links { position: fixed; top: 60px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: none; gap: 12px; }
+  .nav-links.open { display: flex; }
+  .menu-toggle { display: block; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+  .about-image { height: 250px; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item.wide { grid-column: span 2; }
+  .menu-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 32px; }
+  .section, .section-full .section-inner { padding: 60px 16px; }
+  .season-grid { grid-template-columns: repeat(2, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .promo-banner { flex-direction: column; text-align: center; gap: 12px; }
+  .float-btns { right: 10px; bottom: 80px; }
+  .back-top { right: 10px; bottom: 20px; }
+}
+
+@media (max-width: 480px) {
+  .gallery { grid-template-columns: 1fr; }
+  .gallery-item.wide { grid-column: span 1; }
+  .hero .badges { flex-direction: column; align-items: center; }
+  .about-features { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .season-grid { grid-template-columns: 1fr; }
+  .nav-links a { font-size: 13px; }
+  .promo-cards { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Toast 提示 ===== -->
+<div class="toast" id="toast"></div>
+
+<!-- ===== 导航栏 ===== -->
+<nav class="navbar">
+  <div class="logo">🌾 贵州省铜仁市沿河县沙子街道大漆村官坝山庄</div>
+  <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">首页</a></li>
+    <li><a href="#about">关于</a></li>
+    <li><a href="#season">四季</a></li>
+    <li><a href="#promo">优惠</a></li>
+    <li><a href="#menu">菜单</a></li>
+    <li><a href="#price">价格</a></li>
+    <li><a href="#gallery">环境</a></li>
+    <li><a href="#faq">问答</a></li>
+    <li><a href="#contact">联系</a></li>
+    <li><a href="#reserve">预约</a></li>
+  </ul>
+</nav>
+
+<!-- ===== Hero 首页 ===== -->
+<section class="hero" id="home">
+  <h1>贵州省铜仁市沿河县沙子街道大漆村官坝山庄</h1>
+  <p class="subtitle">🌿 品味自然 · 回归田园 · 享受生活 🌿</p>
+  <div class="badges">
+    <span class="badge">🍗 地道农家菜</span>
+    <span class="badge">🎣 休闲垂钓</span>
+    <span class="badge">🍓 果蔬采摘</span>
+    <span class="badge">🏡 民宿住宿</span>
+    <span class="badge">🔥 户外烧烤</span>
+  </div>
+  <div class="scroll-hint">⌄</div>
+</section>
+
+<!-- ===== 关于我们 ===== -->
+<section class="section" id="about">
+  <div class="section-title"><h2>关于我们</h2><p>山水人文，十年匠心</p></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <h3>🏡 乌江河畔，白泥河边的世外桃源</h3>
+      <p>贵州省铜仁市沿河县沙子街道大漆村官坝山庄位于贵州省沿河土家族自治县沙子街道大漆村官坝组，<strong>四面环山，紧临乌江支流——白泥河</strong>。河水清澈蜿蜒，两岸千年古枫杨树成荫，白鹭翩飞、锦鸡出没，是一处藏在土家山岭间的天然氧吧。下游即是<strong>白泥河国家级湿地公园</strong>，风光如画。</p>
+      <p>山庄已<strong>开业十年</strong>，是本地口碑最好的农家乐之一。所有食材均来自自家菜园和周边农户——新鲜采摘的时蔬、散养的土鸡土鸭、白泥河里的野生鱼虾，柴火灶烹饪，每一道菜都是地道的土家农家味。</p>
+      <p>更难得的是，山庄所在地正是<strong>贵州最早的书院——銮塘书院（鸾塘书院）遗址所在</strong>。书院始建于南宋绍兴年间（1131—1162年），距今近<strong>900年</strong>，比著名的白鹿洞书院还早约30年，历经宋、元、明、清四朝，走出了朱可熹、朱可颐兄弟等科举名人。在这片书香浸润的土地上，品一餐农家饭，感受千年文脉，别有一番滋味。</p>
+      <div class="about-features">
+        <div class="about-feature"><div class="icon">🏛️</div><h4>銮塘书院遗址旁</h4></div>
+        <div class="about-feature"><div class="icon">🐔</div><h4>散养土鸡土鸭</h4></div>
+        <div class="about-feature"><div class="icon">🌊</div><h4>白泥河湿地公园</h4></div>
+        <div class="about-feature"><div class="icon">🎭</div><h4>土家文化体验</h4></div>
+      </div>
+    </div>
+    <div class="about-image">🏛️</div>
+  </div>
+</section>
+
+<!-- ===== 四季特色日历 ===== -->
+<section class="section-full" id="season">
+  <div class="section-inner">
+    <div class="section-title"><h2>🌸 四季特色日历</h2><p>一年四季，都有不一样的精彩</p></div>
+    <div class="season-grid">
+      <div class="season-card spring">
+        <div class="season-icon">🌸</div>
+        <h3>春天</h3>
+        <div class="months">3月 - 5月</div>
+        <ul>
+          <li>🌸 沙子李花节（金海雪山）</li>
+          <li>🌿 挖野菜体验</li>
+          <li>🌊 白泥河踏青</li>
+          <li>🪁 放风筝</li>
+          <li>🏛️ 探访銮塘书院遗址</li>
+        </ul>
+      </div>
+      <div class="season-card summer">
+        <div class="season-icon">☀️</div>
+        <h3>夏天</h3>
+        <div class="months">6月 - 8月</div>
+        <ul>
+          <li>🍑 沙子空心李采摘</li>
+          <li>🏕️ 白泥河露营戏水</li>
+          <li>🎣 休闲垂钓</li>
+          <li>🔥 篝火晚会</li>
+          <li>🦞 垂钓小龙虾</li>
+        </ul>
+      </div>
+      <div class="season-card autumn">
+        <div class="season-icon">🍂</div>
+        <h3>秋天</h3>
+        <div class="months">9月 - 11月</div>
+        <ul>
+          <li>🍇 葡萄采摘</li>
+          <li>🌽 掰玉米体验</li>
+          <li>🍠 挖红薯/烤红薯</li>
+          <li>🎃 南瓜丰收季</li>
+          <li>🦀 螃蟹肥美时</li>
+        </ul>
+      </div>
+      <div class="season-card winter">
+        <div class="season-icon">❄️</div>
+        <h3>冬天</h3>
+        <div class="months">12月 - 2月</div>
+        <ul>
+          <li>🍊 柑橘采摘</li>
+          <li>🍲 杀猪菜/刨猪汤</li>
+          <li>🔥 围炉烤火聊天</li>
+          <li>🧧 农家年夜饭</li>
+          <li>❄️ 冬日赏雪景</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 优惠活动 ===== -->
+<section class="section" id="promo">
+  <div class="section-title"><h2>🎁 优惠活动</h2><p>限时特惠，诚意满满</p></div>
+  <div class="promo-banner">
+    <span class="promo-text">🔥 本月特惠：首次到店消费享9折优惠！</span>
+    <span class="promo-badge">限时优惠</span>
+  </div>
+  <div class="promo-cards">
+    <div class="promo-card">
+      <div class="p-icon">🎉</div>
+      <div>
+        <h4>新客专享</h4>
+        <div class="p-desc">首次到店扫码关注微信，立享菜品9折</div>
+      </div>
+    </div>
+    <div class="promo-card">
+      <div class="p-icon">👥</div>
+      <div>
+        <h4>满十送一</h4>
+        <div class="p-desc">团队消费满10人，免1人餐费（套餐除外）</div>
+      </div>
+    </div>
+    <div class="promo-card">
+      <div class="p-icon">🏡</div>
+      <div>
+        <h4>住宿+餐饮套餐</h4>
+        <div class="p-desc">住宿+三餐全包，一站式省心体验</div>
+        <div class="p-price">¥168/人起</div>
+      </div>
+    </div>
+    <div class="promo-card">
+      <div class="p-icon">🎂</div>
+      <div>
+        <h4>生日特惠</h4>
+        <div class="p-desc">生日当天到店，赠送长寿面+水果拼盘</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 特色服务 ===== -->
+<section class="section-full" id="services">
+  <div class="section-inner">
+    <div class="section-title"><h2>特色服务</h2><p>吃喝玩乐，一站尽享</p></div>
+    <div class="services-grid">
+      <div class="service-card"><div class="icon">🍽️</div><h3>农家餐饮</h3><p>地道农家菜，柴火灶烹饪，散养土鸡、现摘蔬菜、野生河鲜，让您品尝最纯正的乡村味道</p></div>
+      <div class="service-card"><div class="icon">🎣</div><h3>休闲垂钓</h3><p>拥有3亩鱼塘，提供钓竿租赁，钓到的鱼可现场加工烹饪，享受"自己动手、丰衣足食"的乐趣</p></div>
+      <div class="service-card"><div class="icon">🍓</div><h3>果蔬采摘</h3><p>四季有果：春季草莓、夏季西瓜、秋季葡萄、冬季柑橘，体验亲手采摘的快乐</p></div>
+      <div class="service-card"><div class="icon">🏡</div><h3>民宿住宿</h3><p>干净舒适的农家小院客房，配备独立卫浴、空调、WiFi，听虫鸣蛙叫入眠，被鸟语花香唤醒</p></div>
+      <div class="service-card"><div class="icon">🔥</div><h3>户外烧烤</h3><p>提供烧烤设备与新鲜食材，在星空下与亲朋好友享受自助烧烤的欢乐时光</p></div>
+      <div class="service-card"><div class="icon">🎉</div><h3>聚会团建</h3><p>承接生日宴、同学会、公司团建等活动，提供KTV、棋牌、篝火晚会等娱乐项目</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 菜品菜单 ===== -->
+<section class="section" id="menu">
+  <div class="section-title"><h2>菜品菜单</h2><p>柴火灶 · 农家味 · 妈妈的味道</p></div>
+  <div class="menu-tabs">
+    <button class="menu-tab active" data-cat="all">全部菜品</button>
+    <button class="menu-tab" data-cat="signature">🔥 招牌推荐</button>
+    <button class="menu-tab" data-cat="meat">🥩 肉类荤菜</button>
+    <button class="menu-tab" data-cat="veggie">🥬 时蔬素菜</button>
+    <button class="menu-tab" data-cat="soup">🍲 汤羹主食</button>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+  <div class="menu-download">
+    <button id="downloadMenuBtn">📸 保存菜单为图片</button>
+  </div>
+</section>
+
+<!-- ===== 价格参考 ===== -->
+<section class="section-full" id="price">
+  <div class="section-inner">
+    <div class="section-title"><h2>价格参考</h2><p>丰俭由人，明码实价</p></div>
+    <div style="overflow-x: auto;">
+      <table class="price-table">
+        <thead><tr><th>项目</th><th>说明</th><th class="price-col">价格</th></tr></thead>
+        <tbody>
+          <tr class="category"><td colspan="3">🍽️ 餐饮</td></tr>
+          <tr><td>点菜自选</td><td>按菜单单点，丰俭由人</td><td class="price-col">人均 ¥40-80</td></tr>
+          <tr><td>团队套餐 A</td><td>8-10人，含10菜1汤+水果</td><td class="price-col">¥588/桌</td></tr>
+          <tr><td>团队套餐 B</td><td>8-10人，含12菜1汤+水果+酒水</td><td class="price-col">¥888/桌</td></tr>
+          <tr><td>自助烧烤</td><td>提供烤具+食材，不限量</td><td class="price-col">¥68/人</td></tr>
+          <tr class="category"><td colspan="3">🏡 住宿</td></tr>
+          <tr><td>标准双人间</td><td>独立卫浴、空调、WiFi</td><td class="price-col">¥128/晚</td></tr>
+          <tr><td>家庭套房</td><td>一室一厅，可住3-4人</td><td class="price-col">¥198/晚</td></tr>
+          <tr><td>农家小院（整租）</td><td>3间房+院子+厨房，适合家庭聚会</td><td class="price-col">¥498/晚</td></tr>
+          <tr class="category"><td colspan="3">🎣 休闲项目</td></tr>
+          <tr><td>垂钓</td><td>含钓竿租赁，鱼获另计</td><td class="price-col">¥30/人</td></tr>
+          <tr><td>果蔬采摘</td><td>按季节开放，称重计费</td><td class="price-col">¥10-30/斤</td></tr>
+          <tr><td>棋牌/KTV</td><td>包时段使用</td><td class="price-col">¥50/3小时</td></tr>
+          <tr><td>篝火晚会</td><td>含柴火+音响设备</td><td class="price-col">¥300/场</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center; margin-top:20px; color:#999; font-size:13px;">※ 以上价格为参考价，节假日可能略有浮动，具体请电话咨询确认</p>
+  </div>
+</section>
+
+<!-- ===== 环境展示 ===== -->
+<section class="section" id="gallery">
+  <div class="section-title"><h2>环境展示</h2><p>实景拍摄，欢迎来玩</p></div>
+  <div class="gallery" id="galleryGrid">
+    <div class="gallery-item wide" data-caption="园区全景 — 青山绿水环绕，白泥河畔的世外桃源">
+      <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?w=800&h=600&fit=crop" alt="园区全景" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <span style="display:none;">🌳</span>
+      <div class="caption">园区全景</div>
+    </div>
+    <div class="gallery-item" data-caption="干净明亮的农家餐厅，柴火灶烹饪土家美味">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=450&fit=crop" alt="餐厅环境" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <span style="display:none;">🍽️</span>
+      <div class="caption">餐厅环境</div>
+    </div>
+    <div class="gallery-item" data-caption="温馨舒适的农家客房，听虫鸣蛙叫入眠">
+      <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=600&h=450&fit=crop" alt="民宿客房" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <span style="display:none;">🏡</span>
+      <div class="caption">民宿客房</div>
+    </div>
+    <div class="gallery-item" data-caption="白泥河畔，休闲垂钓，享受慢时光">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=450&fit=crop" alt="垂钓鱼塘" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <span style="display:none;">🎣</span>
+      <div class="caption">垂钓鱼塘</div>
+    </div>
+    <div class="gallery-item" data-caption="四季采摘果园，国家地理标志——沙子空心李">
+      <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=600&h=450&fit=crop" alt="采摘果园" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <span style="display:none;">🍓</span>
+      <div class="caption">采摘果园</div>
+    </div>
+    <div class="gallery-item" data-caption="户外烧烤区，星空下的美食盛宴">
+      <img src="https://images.unsplash.com/photo-1529193591184-b1e580e8ae5f?w=600&h=450&fit=crop" alt="户外烧烤" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <span style="display:none;">🔥</span>
+      <div class="caption">户外烧烤区</div>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top:20px; color:#999; font-size:13px;">※ 以上为参考图片，替换为实景照片后效果更佳。将你的照片改名为对应文件名放入同目录即可</p>
+</section>
+
+<!-- ===== 灯箱 ===== -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">✕</button>
+  <button class="lb-prev" id="lbPrev">‹</button>
+  <button class="lb-next" id="lbNext">›</button>
+  <div class="lb-content" id="lbContent"></div>
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<!-- ===== 顾客评价 ===== -->
+<section class="section-full" id="reviews">
+  <div class="section-inner">
+    <div class="section-title"><h2>顾客好评</h2><p>口碑相传，值得信赖</p></div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="stars">⭐⭐⭐⭐⭐</div><div class="text">"周末带家人来的，孩子玩疯了！采摘草莓、喂鸡喂鸭，城里体验不到的乐趣。饭菜也特别香，土鸡汤太好喝了！"</div><div class="author">—— 张先生 · 家庭出游</div></div>
+      <div class="review-card"><div class="stars">⭐⭐⭐⭐⭐</div><div class="text">"公司团建选了这里，场地大、项目多，篝火晚会氛围超好。农家菜量大实惠，同事们都说过段时间还要再来。"</div><div class="author">—— 李经理 · 公司团建</div></div>
+      <div class="review-card"><div class="stars">⭐⭐⭐⭐⭐</div><div class="text">"住宿环境比想象中好很多，干净整洁，晚上特别安静。早上起来推开窗就是一片绿色，空气都是甜的。"</div><div class="author">—— 王女士 · 闺蜜出游</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 常见问题 ===== -->
+<section class="section" id="faq">
+  <div class="section-title"><h2>🙋 常见问题</h2><p>您可能想了解的都在这里</p></div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">🐶 可以带宠物吗？<span class="arrow">▼</span></div>
+      <div class="faq-a">可以！我们欢迎您携带宠物，但请牵好绳索，注意卫生。室外区域宠物可自由活动，室内餐厅和民宿客房暂不支持宠物进入，感谢理解。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">🌧️ 下雨天有什么可以玩的？<span class="arrow">▼</span></div>
+      <div class="faq-a">下雨天也有不少乐趣！室内有KTV、棋牌室、桌游等娱乐设施。还可以在凉亭下喝茶聊天、赏雨中田园景色。柴火灶的饭菜雨天吃更有滋味哦！</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">🅿️ 有停车场吗？停车方便吗？<span class="arrow">▼</span></div>
+      <div class="faq-a">有！我们设有免费停车场，可停放约30辆车，包括大型巴士。停车场就在园区入口处，停车非常方便。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">📅 需要提前预约吗？<span class="arrow">▼</span></div>
+      <div class="faq-a">散客一般不需要预约，直接来即可。但团队（10人以上）、需要住宿或烧烤的客人，建议提前1-2天预约，方便我们为您准备好食材和房间。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">👶 适合带小孩吗？有什么儿童设施？<span class="arrow">▼</span></div>
+      <div class="faq-a">非常适合！我们有小动物喂养区（小鸡、小鸭、小兔子）、沙坑、秋千、滑梯等儿童游乐设施。采摘活动也很受小朋友欢迎。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">💳 支持哪些支付方式？<span class="arrow">▼</span></div>
+      <div class="faq-a">支持微信支付、支付宝、现金和银行卡刷卡，方便您自由选择。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">🕐 可以只来半天不吃饭吗？<span class="arrow">▼</span></div>
+      <div class="faq-a">当然可以！您可以单独选择垂钓（¥30/人）、采摘（按斤计费）等项目，不强制用餐。不过我们的农家菜真的很好吃，推荐尝一尝哦！</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">🚌 有没有公共交通？能不能接站？<span class="arrow">▼</span></div>
+      <div class="faq-a">附近有XX路公交车可达XX站，下车后步行约10分钟。团队客户（15人以上）我们可以提供免费接站服务，具体请提前电话沟通。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 交通指引 + 地图 ===== -->
+<section class="section-full" id="traffic">
+  <div class="section-inner">
+    <div class="section-title"><h2>🗺️ 交通指引</h2><p>怎么来？看这里</p></div>
+    <div class="traffic-grid">
+      <div class="traffic-card">
+        <h4>🚗 自驾路线</h4>
+        <p>导航搜索"<strong>贵州省铜仁市沿河县沙子街道大漆村官坝山庄</strong>"即可。<br>从沿河县城出发约<strong>30分钟</strong>车程，全程柏油路，路况良好。</p>
+      </div>
+      <div class="traffic-card">
+        <h4>🚌 公交路线</h4>
+        <p>乘坐<strong>XX路</strong>公交车到"<strong>XX村</strong>"站下车，步行约10分钟即到。也可提前联系我们，派人到站台接您。</p>
+      </div>
+      <div class="traffic-card">
+        <h4>🅿️ 停车信息</h4>
+        <p>园区设有<strong>免费停车场</strong>，约30个车位，可停放大巴。停车就在入口处，非常方便。</p>
+      </div>
+      <div class="traffic-card">
+        <h4>🚉 接站服务</h4>
+        <p>团队客户（15人以上）可提供<strong>免费接站</strong>服务。沿河客运站、铜仁火车站均可接，请提前一天电话预约。</p>
+      </div>
+    </div>
+    <!-- 地图 -->
+    <div class="map-container">
+      <iframe src="https://map.baidu.com/embed?q=贵州省铜仁市沿河县沙子街道大漆村官坝山庄&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="百度地图"></iframe>
+    </div>
+    <div class="map-actions">
+      <a href="https://map.baidu.com/search/贵州省铜仁市沿河县沙子街道大漆村官坝山庄" target="_blank" class="btn-baidu">📍 打开百度地图导航</a>
+      <a href="https://uri.amap.com/search?keyword=贵州省铜仁市沿河县沙子街道大漆村官坝山庄" target="_blank" class="btn-gaode">📍 打开高德地图导航</a>
+    </div>
+    <p style="text-align:center; margin-top:16px; color:#999; font-size:13px;">※ 点击上方按钮可直接导航到贵州省铜仁市沿河县沙子街道大漆村官坝山庄</p>
+  </div>
+</section>
+
+<!-- ===== 在线预约 ===== -->
+<section class="section" id="reserve">
+  <div class="section-title"><h2>📅 在线预约</h2><p>提前预约，我们为您准备好一切</p></div>
+  <form class="reserve-form" id="reserveForm">
+    <div class="form-row">
+      <div class="form-group">
+        <label>👤 您的姓名</label>
+        <input type="text" id="rName" placeholder="请输入姓名" required>
+      </div>
+      <div class="form-group">
+        <label>📱 手机号码</label>
+        <input type="tel" id="rPhone" placeholder="请输入手机号" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>📅 到店日期</label>
+        <input type="date" id="rDate" required>
+      </div>
+      <div class="form-group">
+        <label>👥 人数</label>
+        <select id="rPeople">
+          <option value="">请选择</option>
+          <option>1-2人</option><option>3-5人</option><option>6-10人</option>
+          <option>11-20人</option><option>20人以上</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>🎯 感兴趣的项目（可多选）</label>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;padding-top:4px;" id="rInterest">
+        <label style="display:flex;align-items:center;gap:6px;font-weight:normal;cursor:pointer;font-size:14px;"><input type="checkbox" value="餐饮"> 🍽️ 餐饮</label>
+        <label style="display:flex;align-items:center;gap:6px;font-weight:normal;cursor:pointer;font-size:14px;"><input type="checkbox" value="住宿"> 🏡 住宿</label>
+        <label style="display:flex;align-items:center;gap:6px;font-weight:normal;cursor:pointer;font-size:14px;"><input type="checkbox" value="垂钓"> 🎣 垂钓</label>
+        <label style="display:flex;align-items:center;gap:6px;font-weight:normal;cursor:pointer;font-size:14px;"><input type="checkbox" value="采摘"> 🍓 采摘</label>
+        <label style="display:flex;align-items:center;gap:6px;font-weight:normal;cursor:pointer;font-size:14px;"><input type="checkbox" value="烧烤"> 🔥 烧烤</label>
+        <label style="display:flex;align-items:center;gap:6px;font-weight:normal;cursor:pointer;font-size:14px;"><input type="checkbox" value="团建"> 🎉 团建</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>💬 备注说明</label>
+      <textarea id="rNote" placeholder="如有特殊需求请在此说明，例如：需要儿童座椅、有老人同行、忌口食物等"></textarea>
+    </div>
+    <button type="submit" class="submit-btn">📩 提交预约</button>
+    <p style="text-align:center; margin-top:12px; color:#999; font-size:12px;">提交后我们会在24小时内电话确认，请保持手机畅通</p>
+  </form>
+</section>
+
+<!-- ===== 联系我们 ===== -->
+<section class="section-full" id="contact">
+  <div class="section-inner">
+    <div class="section-title"><h2>联系我们</h2><p>欢迎来电咨询或实地考察</p></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>📞 联系方式</h3>
+        <div class="contact-item"><div class="cicon">📱</div><div><div class="label">联系电话</div><div class="value">15985625897</div></div></div>
+        <div class="contact-item"><div class="cicon">📞</div><div><div class="label">座机电话</div><div class="value">15885787897</div></div></div>
+        <div class="contact-item"><div class="cicon">💬</div><div><div class="label">微信客服</div><div class="value" style="user-select:all;">Z_Yaoyao123</div></div></div>
+        <div class="contact-item"><div class="cicon">📍</div><div><div class="label">地址</div><div class="value">贵州省铜仁市沿河土家族自治县沙子街道大漆村官坝组贵州省铜仁市沿河县沙子街道大漆村官坝山庄</div></div></div>
+        <div class="contact-item"><div class="cicon">⏰</div><div><div class="label">营业时间</div><div class="value">每天 9:00 - 23:00（住宿24小时）</div></div></div>
+      </div>
+      <div class="qr-box">
+        <h4>📱 扫码访问本页面</h4>
+        <div id="qrcode"></div>
+        <p class="tip">打开手机相机扫一扫，即可分享给朋友</p>
+        <div class="qr-actions">
+          <button onclick="window.print()">🖨️ 打印页面</button>
+          <button id="shareBtn">📤 分享链接</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 悬浮按钮 ===== -->
+<div class="float-btns">
+  <button class="float-btn wechat" id="floatWechat" aria-label="微信客服">
+    💬
+    <span class="tooltip">复制微信号</span>
+    <span class="copied" id="copiedMsg">✅ 已复制</span>
+  </button>
+  <a class="float-btn tel" href="tel:15985625897" aria-label="拨打电话" style="text-decoration:none;">
+    📞
+    <span class="tooltip">拨打电话</span>
+  </a>
+</div>
+
+<!-- ===== 页脚 ===== -->
+<footer class="footer">
+  <div class="brand">🌾 贵州省铜仁市沿河县沙子街道大漆村官坝山庄</div>
+  <p>品味自然 · 回归田园 · 享受生活</p>
+  <p style="margin-top:8px;">© 2026 贵州省铜仁市沿河县沙子街道大漆村官坝山庄 版权所有</p>
+</footer>
+
+<!-- ===== 回到顶部 ===== -->
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<!-- ===== QR码库 & html2canvas ===== -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+<script>
+// ===== Toast 工具函数 =====
+function showToast(msg, duration) {
+  duration = duration || 2000;
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timeout);
+  t._timeout = setTimeout(function(){ t.classList.remove('show'); }, duration);
+}
+
+// ===== 菜单数据 =====
+var menuData = [
+  // 招牌推荐
+  { cat:'signature', name:'土家九大碗', desc:'土家族传统宴席，扣肉、酥肉、蛋卷等九道硬菜', price:0, unit:'桌', badge:'必点', emoji:'🍱' },
+  { cat:'signature', name:'铁锅炖土鸡', desc:'散养土鸡，柴火铁锅慢炖，汤浓肉香', price:0, unit:'份', badge:'招牌', emoji:'🍲' },
+  { cat:'signature', name:'杀猪饭（刨汤肉）', desc:'土家传统年味，现宰土猪，白菜炖猪血是灵魂', price:0, unit:'桌', badge:'特色', emoji:'🥘' },
+  { cat:'signature', name:'羊肉焖豆腐', desc:'沿河白山羊配手工石磨豆腐，肉质细腻', price:0, unit:'份', badge:'推荐', emoji:'🐑' },
+  // 肉类荤菜
+  { cat:'meat', name:'土家酸鱼', desc:'白泥河鲜鱼加小米辣腌制发酵，醇香开胃', price:0, unit:'份', emoji:'🐟' },
+  { cat:'meat', name:'蒜苗炒腊肉', desc:'自家熏制土猪腊肉，咸香下饭', price:0, unit:'份', emoji:'🥓' },
+  { cat:'meat', name:'干锅土鸡', desc:'散养土鸡，麻辣鲜香，越吃越过瘾', price:0, unit:'份', emoji:'🍗' },
+  { cat:'meat', name:'酸菜鱼', desc:'白泥河鲜鱼配自制酸菜，酸辣鲜嫩', price:0, unit:'份', emoji:'🐠' },
+  { cat:'meat', name:'农家回锅肉', desc:'土猪肉配蒜苗豆瓣，肥而不腻', price:0, unit:'份', emoji:'🥩' },
+  { cat:'meat', name:'官舟牛肉干', desc:'本地土黄牛肉，麻辣/五香两种口味', price:0, unit:'份', emoji:'🥩' },
+  // 时蔬素菜
+  { cat:'veggie', name:'斑鸠窝豆腐（神仙豆腐）', desc:'神仙树叶制作，深绿滑嫩，蘸辣椒水一绝', price:0, unit:'份', emoji:'🌿' },
+  { cat:'veggie', name:'土家灰包豆腐', desc:'传统草木灰点制，外香内嫩，绵味细长', price:0, unit:'份', emoji:'🧈' },
+  { cat:'veggie', name:'包海椒', desc:'土家传统腌菜，酸辣爽口，开胃神器', price:0, unit:'份', emoji:'🌶️' },
+  { cat:'veggie', name:'清炒时蔬', desc:'菜园现摘，什么新鲜炒什么', price:0, unit:'份', emoji:'🥬' },
+  { cat:'veggie', name:'土家苦荞粑', desc:'苦荞面手工制作，健康粗粮', price:0, unit:'份', emoji:'🫓' },
+  { cat:'veggie', name:'番茄炒土鸡蛋', desc:'自家土鸡蛋配有机番茄，简单就是美味', price:0, unit:'份', emoji:'🍅' },
+  // 汤羹主食
+  { cat:'soup', name:'浑浆豆花荞面', desc:'沿河经典名吃，豆浆煮荞面配嫩豆花', price:0, unit:'碗', emoji:'🍜' },
+  { cat:'soup', name:'糯米包子', desc:'糯米粉做皮，冰糖芝麻肉哨子为馅，甜香鲜酥', price:0, unit:'份(4个)', emoji:'🥟' },
+  { cat:'soup', name:'土家水挂面', desc:'纯手工扯制，配脆哨、酸豇豆等浇头', price:0, unit:'碗', emoji:'🍝' },
+  { cat:'soup', name:'土家油茶汤', desc:'土家族传统饮品，茶叶+阴米+炒豆，咸香暖胃', price:0, unit:'碗', emoji:'🍵' },
+  { cat:'soup', name:'柴火米饭', desc:'铁锅柴火焖煮，锅巴焦香，粒粒分明', price:0, unit:'份', emoji:'🍚' },
+];
+
+
+function renderMenu(cat) {
+  var grid = document.getElementById('menuGrid');
+  var items = cat === 'all' ? menuData : menuData.filter(function(m){ return m.cat === cat; });
+  grid.innerHTML = items.map(function(m){
+    var priceHtml = m.price > 0 ? '¥' + m.price + ' <span>/ ' + m.unit + '</span>' : '<span style="color:#999;">待定价</span>';
+    return '<div class="menu-item">' +
+      '<div class="img">' + m.emoji + '</div>' +
+      '<div class="info">' +
+        '<h4>' + m.name + (m.badge ? '<span class="menu-badge">' + m.badge + '</span>' : '') + '</h4>' +
+        '<div class="desc">' + m.desc + '</div>' +
+        '<div class="price">' + priceHtml + '</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+// Tab切换
+document.querySelectorAll('.menu-tab').forEach(function(tab){
+  tab.addEventListener('click', function(){
+    document.querySelectorAll('.menu-tab').forEach(function(t){ t.classList.remove('active'); });
+    this.classList.add('active');
+    renderMenu(this.dataset.cat);
+  });
+});
+
+// ===== 移动端菜单 =====
+document.getElementById('menuToggle').addEventListener('click', function(){
+  var nav = document.getElementById('navLinks');
+  nav.classList.toggle('open');
+  this.textContent = nav.classList.contains('open') ? '✕' : '☰';
+});
+document.querySelectorAll('.nav-links a').forEach(function(link){
+  link.addEventListener('click', function(){
+    document.getElementById('navLinks').classList.remove('open');
+    document.getElementById('menuToggle').textContent = '☰';
+  });
+});
+
+// ===== 回到顶部 =====
+var backTop = document.getElementById('backTop');
+window.addEventListener('scroll', function(){
+  backTop.classList.toggle('show', window.scrollY > 500);
+});
+backTop.addEventListener('click', function(){
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===== 二维码 =====
+var currentUrl = window.location.href;
+new QRCode(document.getElementById('qrcode'), {
+  text: currentUrl, width: 180, height: 180,
+  colorDark: '#3e2c1c', colorLight: '#ffffff'
+});
+
+// ===== 分享 =====
+document.getElementById('shareBtn').addEventListener('click', function(){
+  if (navigator.share) {
+    navigator.share({ title: '贵州省铜仁市沿河县沙子街道大漆村官坝山庄', text: '品味自然，回归田园——贵州省铜仁市沿河县沙子街道大漆村官坝山庄欢迎您！', url: currentUrl }).catch(function(){});
+  } else {
+    navigator.clipboard.writeText(currentUrl).then(function(){
+      showToast('✅ 链接已复制到剪贴板！');
+    });
+  }
+});
+
+// ===== FAQ 折叠 =====
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click', function(){
+    this.parentElement.classList.toggle('open');
+  });
+});
+
+// ===== 灯箱 =====
+var galleryItems = document.querySelectorAll('.gallery-item');
+var lightbox = document.getElementById('lightbox');
+var lbContent = document.getElementById('lbContent');
+var lbCaption = document.getElementById('lbCaption');
+var currentIndex = 0;
+
+galleryItems.forEach(function(item, index){
+  item.addEventListener('click', function(){
+    currentIndex = index;
+    openLightbox(item);
+  });
+});
+
+function openLightbox(item) {
+  var img = item.querySelector('img');
+  if (img && img.src) {
+    lbContent.innerHTML = '<img src="' + img.src + '" style="max-width:80vw;max-height:60vh;border-radius:12px;object-fit:contain;">';
+  } else {
+    lbContent.innerHTML = item.querySelector('span') ? item.querySelector('span').innerHTML : '📷';
+  }
+  lbCaption.textContent = item.dataset.caption || '';
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', function(e){ if (e.target === lightbox) closeLightbox(); });
+
+document.getElementById('lbPrev').addEventListener('click', function(e){
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  openLightbox(galleryItems[currentIndex]);
+});
+document.getElementById('lbNext').addEventListener('click', function(e){
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % galleryItems.length;
+  openLightbox(galleryItems[currentIndex]);
+});
+document.addEventListener('keydown', function(e){
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+  if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
+});
+
+// ===== 微信悬浮按钮 =====
+document.getElementById('floatWechat').addEventListener('click', function(){
+  var wechatId = 'Z_Yaoyao123';
+  navigator.clipboard.writeText(wechatId).then(function(){
+    var copiedMsg = document.getElementById('copiedMsg');
+    copiedMsg.style.opacity = '1';
+    copiedMsg.style.visibility = 'visible';
+    setTimeout(function(){ copiedMsg.style.opacity = '0'; copiedMsg.style.visibility = 'hidden'; }, 2000);
+  });
+});
+
+// ===== 预约表单 =====
+document.getElementById('reserveForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('rName').value.trim();
+  var phone = document.getElementById('rPhone').value.trim();
+  var date = document.getElementById('rDate').value;
+  var people = document.getElementById('rPeople').value;
+  var interests = [];
+  document.querySelectorAll('#rInterest input:checked').forEach(function(cb){ interests.push(cb.value); });
+  var note = document.getElementById('rNote').value.trim();
+
+  if (!name || !phone) { showToast('⚠️ 请填写姓名和手机号码'); return; }
+
+  // 生成预约信息，方便复制发给客服
+  var msg = '【预约信息】\n' +
+    '姓名：' + name + '\n' +
+    '手机：' + phone + '\n' +
+    '日期：' + (date || '未指定') + '\n' +
+    '人数：' + (people || '未指定') + '\n' +
+    '项目：' + (interests.length ? interests.join('、') : '未指定') + '\n' +
+    '备注：' + (note || '无');
+
+  // 尝试通过微信/系统分享
+  if (navigator.share) {
+    navigator.share({ title: '预约信息 - 贵州省铜仁市沿河县沙子街道大漆村官坝山庄', text: msg }).catch(function(){});
+  }
+  // 复制到剪贴板
+  navigator.clipboard.writeText(msg).then(function(){
+    showToast('✅ 预约信息已复制！请打开微信发送给客服确认');
+  });
+
+  // 重置表单
+  this.reset();
+});
+
+// ===== 菜单下载为图片 =====
+document.getElementById('downloadMenuBtn').addEventListener('click', function(){
+  var menuSection = document.getElementById('menu');
+  // 临时显示所有菜品
+  renderMenu('all');
+  document.querySelectorAll('.menu-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelector('.menu-tab[data-cat="all"]').classList.add('active');
+
+  showToast('⏳ 正在生成菜单图片...', 3000);
+
+  html2canvas(menuSection, {
+    backgroundColor: '#fdf8f0',
+    scale: 2,
+    useCORS: true
+  }).then(function(canvas){
+    var link = document.createElement('a');
+    link.download = '贵州省铜仁市沿河县沙子街道大漆村官坝山庄-菜单.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    showToast('✅ 菜单图片已下载！可以发给朋友啦');
+  }).catch(function(){
+    showToast('⚠️ 生成失败，请截图保存菜单区域');
+  });
+});
+
+// ===== 初始渲染 =====
+renderMenu('all');
+</script>
+</body>
+</html>
