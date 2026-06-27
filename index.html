@@ -44,10 +44,11 @@ body {
 .hero > * { position: relative; z-index: 1; }
 .hero h1 { font-size: clamp(36px, 6vw, 64px); font-weight: 900; letter-spacing: 4px; text-shadow: 2px 2px 8px rgba(0,0,0,0.3); margin-bottom: 16px; }
 .hero .subtitle { font-size: clamp(18px, 2.5vw, 24px); opacity: 0.95; margin-bottom: 32px; letter-spacing: 2px; }
-.hero .badges { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
-.hero .badge { background: rgba(255,255,255,0.18); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.25); padding: 12px 22px; border-radius: 30px; font-size: 15px; letter-spacing: 1px; color: #fff; text-decoration: none; transition: background 0.3s; position: relative; z-index: 2; display: inline-block; touch-action: manipulation; }
-.hero .badge:hover { background: rgba(255,255,255,0.3); }
-.hero .badge:active { background: rgba(255,255,255,0.4); transform: scale(0.96); }
+.hero .badges { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 460px; width: 100%; }
+.hero .badge { background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.22); padding: 20px 16px; border-radius: 18px; font-size: 17px; font-weight: 600; letter-spacing: 1px; color: #fff; text-decoration: none; transition: all 0.3s; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; touch-action: manipulation; }
+.hero .badge .btn-icon { font-size: 32px; }
+.hero .badge:hover { background: rgba(255,255,255,0.28); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+.hero .badge:active { transform: scale(0.95); background: rgba(255,255,255,0.35); }
 .hero .scroll-hint { position: absolute; bottom: 30px; z-index: 1; animation: bounce 2s infinite; font-size: 32px; opacity: 0.7; }
 @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 
@@ -253,7 +254,6 @@ body {
 @media (max-width: 480px) {
   .gallery { grid-template-columns: 1fr; }
   .gallery-item.wide { grid-column: span 1; }
-  .hero .badges { flex-direction: column; align-items: center; }
   .about-features { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
   .season-grid { grid-template-columns: 1fr; }
@@ -287,14 +287,13 @@ body {
 
 <!-- ===== Hero 首页 ===== -->
 <section class="hero" id="home">
-  <h1>贵州省铜仁市沿河县沙子街道大漆村官坝山庄</h1>
+  <h1>官坝山庄</h1>
   <p class="subtitle">🌿 品味自然 · 回归田园 · 享受生活 🌿</p>
   <div class="badges">
-    <a href="#menu" class="badge">🍗 地道农家菜</a>
-    <a href="#services" class="badge">🎣 休闲垂钓</a>
-    <a href="#season" class="badge">🍓 果蔬采摘</a>
-    <a href="#price" class="badge">🏡 民宿住宿</a>
-    <a href="#gallery" class="badge">🔥 户外烧烤</a>
+    <a href="#menu" class="badge"><span class="btn-icon">🍽️</span>菜品菜单</a>
+    <a href="#price" class="badge"><span class="btn-icon">🏡</span>住宿价格</a>
+    <a href="#services" class="badge"><span class="btn-icon">🎣</span>休闲娱乐</a>
+    <a href="#contact" class="badge"><span class="btn-icon">📞</span>联系我们</a>
   </div>
   <div class="scroll-hint">⌄</div>
 </section>
